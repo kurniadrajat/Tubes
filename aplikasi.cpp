@@ -2,6 +2,8 @@
 
 void menu(list_child &LC, list_parent &LP, list_relasi &LR)
 {
+    //NIM : 1301160544
+
     int pil;
     address_parent PP;
     address_child CC;
@@ -52,6 +54,8 @@ void menu(list_child &LC, list_parent &LP, list_relasi &LR)
 
 void masukandata(list_child &LC, list_parent &LP, list_relasi &LR)
 {
+    //NIM : 1301160544
+
     int pil;
     system("CLS");
     cout<<endl;
@@ -83,6 +87,8 @@ void masukandata(list_child &LC, list_parent &LP, list_relasi &LR)
 
 void insert_child(list_child &LC)
 {
+    //NIM : 1301160544
+
     infotype_child D;
     address_child C;
 
@@ -118,6 +124,8 @@ void insert_child(list_child &LC)
 
 void insert_parent(list_parent &LP)
 {
+    //NIM : 1301160544
+
     infotype_parent P;
     address_parent Q;
 
@@ -152,6 +160,8 @@ void insert_parent(list_parent &LP)
 
 void insertRelasi(list_relasi &LR,list_child LC,list_parent LP)
 {
+    //NIM : 1301160444
+
     infotype_parent x;
     infotype_child y;
     address_child C;
@@ -189,6 +199,8 @@ void insertRelasi(list_relasi &LR,list_child LC,list_parent LP)
 }
 
 void lihat_data(list_relasi LR, list_parent LP, list_child LC){
+    //NIM : 1301160544
+
     int pil;
 
     system("CLS");
@@ -224,6 +236,8 @@ void lihat_data(list_relasi LR, list_parent LP, list_child LC){
 }
 
 void lihat_pasien(list_parent LP){
+    //NIM : 1301160544
+
     system("CLS");
     cout<<" ======================================================================== "<<endl;
     cout<<"|                              DATA PASIEN                               |"<<endl;
@@ -235,6 +249,8 @@ void lihat_pasien(list_parent LP){
 }
 
 void lihat_dokter(list_child LC){
+    //NIM : 1301160544
+
     system("CLS");
     cout<<" ======================================================================== "<<endl;
     cout<<"|                              DATA DOKTER                               |"<<endl;
@@ -246,6 +262,8 @@ void lihat_dokter(list_child LC){
 }
 
 void lihat_relasi(list_relasi LR){
+    //NIM : 1301160444
+
     int pil;
 
     system("CLS");
@@ -271,6 +289,8 @@ void lihat_relasi(list_relasi LR){
 }
 
 void hapus_data(list_relasi LR,list_parent LP, list_child LC){
+    //NIM : 1301160544
+
     int pil;
     system("CLS");
     cout<<endl;
@@ -306,6 +326,8 @@ void hapus_data(list_relasi LR,list_parent LP, list_child LC){
 }
 
 void hapus_pasien(list_parent &LP){
+    //NIM : 1301160444
+
     infotype_parent x;
     address_parent P;
     char a;
@@ -343,6 +365,8 @@ void hapus_pasien(list_parent &LP){
 }
 
 void hapus_dokter(list_child &LC){
+    //NIM : 1301160444
+
     infotype_child y;
     address_child C;
     char a;
@@ -379,6 +403,8 @@ void hapus_dokter(list_child &LC){
 }
 
 void hapus_relasi(list_relasi &LR,list_child LC, list_parent LP){
+    //NIM : 1301160444
+
     infotype_parent x;
     infotype_child y;
     address_parent P;
@@ -419,6 +445,8 @@ void hapus_relasi(list_relasi &LR,list_child LC, list_parent LP){
 }
 
 void edit_data(list_relasi LR, list_parent LP, list_child LC){
+    //NIM : 1301160544
+
     int pil;
 
     system("CLS");
@@ -449,6 +477,8 @@ void edit_data(list_relasi LR, list_parent LP, list_child LC){
 }
 
 void edit_pasien(list_parent LP){
+    //NIM : 1301160444
+
     infotype_parent x,y;
     address_parent P;
     char a;
@@ -496,6 +526,8 @@ void edit_pasien(list_parent LP){
 }
 
 void edit_dokter(list_child LP){
+    //NIM : 1301160444
+
     infotype_child x,y;
     address_child P;
     char a;

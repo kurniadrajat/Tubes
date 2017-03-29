@@ -2,11 +2,15 @@
 
 
 void createList(list_relasi &L){
+    //NIM : 1301160544
+
     first(L) = NULL;
     last(L) = NULL;
 }
 
 void insertFirst(list_relasi &L, address_relasi P){
+    //NIM : 1301160544
+
     if (first(L) == NULL){
         first(L) = P;
         last(L) = P;
@@ -19,6 +23,8 @@ void insertFirst(list_relasi &L, address_relasi P){
 }
 
 void insertLast(list_relasi &L, address_relasi P){
+    //NIM : 1301160544
+
     if (first(L) == NULL)
     {
         first(L) = P;
@@ -33,6 +39,8 @@ void insertLast(list_relasi &L, address_relasi P){
 }
 
 void inserAfter(list_relasi &L, address_relasi Prec, address_relasi P){
+    //NIM : 1301160544
+
     if (next(Prec) == NULL){
         insertLast(L,P);
     }
@@ -45,6 +53,8 @@ void inserAfter(list_relasi &L, address_relasi Prec, address_relasi P){
 }
 
 void deleteFirst(list_relasi &L, address_relasi &P){
+    //NIM : 1301160544
+
     P = first(L);
 
     if (first(L) == NULL || first(L) == last(L))
@@ -61,6 +71,8 @@ void deleteFirst(list_relasi &L, address_relasi &P){
 }
 
 void deleteLast(list_relasi &L, address_relasi &P){
+    //NIM : 1301160544
+
     P = last(L);
 
     if (first(L) == NULL || next(first(L)) == NULL)
@@ -77,6 +89,8 @@ void deleteLast(list_relasi &L, address_relasi &P){
 }
 
 void deleteAfter(list_relasi &L, address_relasi Prec, address_relasi &P){
+    //NIM : 1301160544
+
     P = first(L);
 
     if (next(Prec) == NULL)
@@ -94,6 +108,8 @@ void deleteAfter(list_relasi &L, address_relasi Prec, address_relasi &P){
 }
 
 address_relasi alokasi(address_parent P, address_child C){
+    //NIM : 1301160544
+
     address_relasi R;
 
     R = new elmlist_relasi;
@@ -107,10 +123,14 @@ address_relasi alokasi(address_parent P, address_child C){
 }
 
 void dealokasi(address_relasi &P){
+    //NIM : 1301160544
+
     delete P;
 }
 
 address_relasi findByID(list_relasi L, address_parent P, address_child C){
+    //NIM : 1301160444
+
     address_relasi R;
 
     if (first(L) == NULL){
@@ -127,6 +147,8 @@ address_relasi findByID(list_relasi L, address_parent P, address_child C){
 }
 
 void printInfo(list_relasi L){
+    //NIM : 1301160544
+
     address_relasi R;
 
     R = first(L);
@@ -144,6 +166,8 @@ void printInfo(list_relasi L){
 }
 
 void deleteRelasi(list_relasi &LR, list_child LC, list_parent LP, infotype_child CC, infotype_parent PP, address_relasi &RR){
+    //NIM : 1301160444
+
     address_child C;
     address_parent P;
     address_relasi R;
@@ -174,6 +198,8 @@ void deleteRelasi(list_relasi &LR, list_child LC, list_parent LP, infotype_child
 
 bool cek_id(list_relasi LR, address_child C, address_parent P)
 {
+    //NIM : 1301160444
+
     bool ada;
     address_relasi R;
 
@@ -194,6 +220,7 @@ bool cek_id(list_relasi LR, address_child C, address_parent P)
 }
 
 void deleteByID(list_relasi &LR, address_relasi &R){
+    //NIM : 1301160444
 
     if (R == last(LR)){
         deleteLast(LR,R);
@@ -208,6 +235,8 @@ void deleteByID(list_relasi &LR, address_relasi &R){
 
 void sorting(list_relasi &L)
 {
+    //NIM : 1301160444
+
     address_relasi P,Q;
 
     if (first(L) == NULL || next(first(L)) == NULL){
@@ -215,7 +244,7 @@ void sorting(list_relasi &L)
     }
     else{
         P = first(L);
-        while (P != NULL){
+        while (next(P) != NULL){
             Q = next(P);
             while (Q != NULL){
                 if (info(parent(Q)).id < info(parent(P)).id){

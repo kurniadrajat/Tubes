@@ -2,12 +2,16 @@
 
 void createList(list_parent &L)
 {
+    //NIM : 1301160544
+
     first(L) = NULL;
     last(L) = NULL;
 }
 
 address_parent alokasi(infotype_parent x)
 {
+    //NIM : 1301160544
+
     address_parent P;
 
     P = new elmlist_parent;
@@ -25,6 +29,7 @@ address_parent alokasi(infotype_parent x)
 
 void insertFirst(list_parent &L, address_parent P)
 {
+    //NIM : 1301160544
 
     if (first(L) == NULL)
     {
@@ -41,6 +46,7 @@ void insertFirst(list_parent &L, address_parent P)
 
 void insertLast(list_parent &L, address_parent P)
 {
+    //NIM : 1301160544
 
     if (first(L) == NULL)
     {
@@ -82,6 +88,8 @@ address_parent findByID(list_parent L, infotype_parent x)
 
 void deleteFirst(list_parent &L, address_parent &P)
 {
+    //NIM : 1301160544
+
     P = first(L);
 
     if (first(L) == NULL || first(L) == last(L))
@@ -99,6 +107,8 @@ void deleteFirst(list_parent &L, address_parent &P)
 
 void deleteLast(list_parent &L, address_parent &P)
 {
+    //NIM : 1301160544
+
     P = last(L);
 
     if (first(L) == NULL || next(first(L)) == NULL)
@@ -116,6 +126,8 @@ void deleteLast(list_parent &L, address_parent &P)
 
 void deleteAfter(list_parent &L, address_parent Prec, address_parent &P)
 {
+    //NIM : 1301160544
+
     P = first(L);
 
     if (next(Prec) == NULL)
@@ -134,6 +146,8 @@ void deleteAfter(list_parent &L, address_parent Prec, address_parent &P)
 
 void insertAfter(list_parent &L,address_parent Prec,address_parent P)
 {
+    //NIM : 1301160544
+
     if (next(Prec) == NULL){
         insertLast(L,P);
     }
@@ -145,6 +159,8 @@ void insertAfter(list_parent &L,address_parent Prec,address_parent P)
 }
 
 void insert_ascending(list_parent &LP, address_parent P){
+    //NIM : 1301160444
+
     address_parent prec;
 
     if (first(LP) == NULL || info(first(LP)).id > info(P).id){
@@ -166,6 +182,8 @@ void insert_ascending(list_parent &LP, address_parent P){
 
 bool cek_id(list_parent LP,infotype_parent x)
 {
+    //NIM : 1301160444
+
     bool ada;
     address_parent P;
 
@@ -189,6 +207,8 @@ bool cek_id(list_parent LP,infotype_parent x)
 }
 
 void printInfo(list_parent L){
+    //NIM : 1301160544
+
     address_parent P;
 
     P = first(L);
@@ -212,6 +232,7 @@ void printInfo(list_parent L){
 }
 
 void deleteByID(list_parent &LP, address_parent &P){
+    //NIM : 1301160444
 
     if (P == last(LP)){
         deleteLast(LP,P);
@@ -225,6 +246,7 @@ void deleteByID(list_parent &LP, address_parent &P){
 }
 
 void edit_data(list_parent &LP, address_parent P,infotype_parent x){
+    //NIM : 1301160444
 
     if (P != NULL){
         info(P).nama = x.nama;

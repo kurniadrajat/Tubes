@@ -2,10 +2,14 @@
 
 
 void createList(list_child &L){
+    //NIM : 1301160544
+
     first(L) = NULL;
 }
 
 address_child alokasi(infotype_child x){
+    //NIM : 1301160544
+
     address_child P;
 
     P = new elmlist_child;
@@ -21,10 +25,13 @@ address_child alokasi(infotype_child x){
 }
 
 void dealokasi(address_child &P){
+    //NIM : 1301160544
+
     delete P;
 }
 
 void insertFirst(list_child &L, address_child P){
+    //NIM : 1301160544
 
     if (first(L) == NULL){
         first(L) = P;
@@ -37,6 +44,8 @@ void insertFirst(list_child &L, address_child P){
 }
 
 void insertLast(list_child &L, address_child P){
+    //NIM : 1301160544
+
     address_child Q;
 
     if (first(L) == NULL ){
@@ -56,6 +65,8 @@ void insertLast(list_child &L, address_child P){
 
 void insertAfter(list_child &L, address_child prec,address_child P)
 {
+    //NIM : 1301160544
+
     if (next(prec)==NULL){
         insertLast(L,P);
     }
@@ -84,7 +95,10 @@ address_child findByID(list_child L, infotype_child x){
 }
 
 void deleteFirst(list_child &L, address_child &P){
+    //NIM : 1301160544
+
     P=first(L);
+
     if (first(L)==NULL || next(first(L))!=NULL){
         first(L)=NULL;
     }
@@ -96,6 +110,7 @@ void deleteFirst(list_child &L, address_child &P){
 }
 
 void deleteLast(list_child &L, address_child &P){
+    //NIM : 1301160544
 
     P = first(L);
 
@@ -113,6 +128,7 @@ void deleteLast(list_child &L, address_child &P){
 }
 
 void deleteAfter(list_child &L, address_child Prec, address_child &P){
+    //NIM : 1301160544
 
     if (next(next(Prec)) == NULL){
         deleteLast(L,P);
@@ -146,6 +162,8 @@ void insert_ascending(list_child &LC, address_child P){
 
 bool cek_id(list_child LC,infotype_child x)
 {
+    //NIM : 1301160444
+
     bool ada;
     address_child C;
 
@@ -169,6 +187,8 @@ bool cek_id(list_child LC,infotype_child x)
 }
 
 void printInfo(list_child L){
+    //NIM : 1301160544
+
     address_child C;
 
     C = first(L);
@@ -191,6 +211,8 @@ void printInfo(list_child L){
 }
 
 void deleteByID(list_child &LC,address_child &P){
+    //NIM : 1301160444
+
     address_child prec;
 
     if (next(P) == NULL){
@@ -209,6 +231,7 @@ void deleteByID(list_child &LC,address_child &P){
 }
 
 void edit_data(list_child &LC, address_child C, infotype_child y){
+    //NIM : 1301160444
 
     if (C != NULL){
         info(C).nama = y.nama;
